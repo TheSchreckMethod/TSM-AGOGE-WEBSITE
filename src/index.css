@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=JetBrains+Mono:wght@400;700;800&family=Inter:wght@400;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #0B0B0B;
+  --color-crimson: #8B0000;
+  --color-bronze: #CD7F32;
+  --color-gold: #D4AF37;
+  --font-serif: "Cinzel", serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-obsidian text-white font-sans antialiased;
+    background-image: radial-gradient(circle at 50% 0%, rgba(139, 0, 0, 0.05) 0%, transparent 70%),
+                      radial-gradient(circle at 50% 100%, rgba(212, 175, 55, 0.03) 0%, transparent 70%);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif uppercase tracking-widest text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative overflow-hidden bg-transparent border border-bronze text-bronze px-8 py-4 font-serif text-sm tracking-[0.2em] uppercase transition-all duration-300;
+  }
+  
+  .btn-primary:hover {
+    @apply text-obsidian bg-bronze shadow-[0_0_20px_rgba(205,127,50,0.4)];
+  }
+  
+  .glass-panel {
+    @apply bg-black/60 border border-white/10 backdrop-blur-md;
+  }
+  
+  .doctrine-text {
+    @apply font-serif text-white/80 leading-relaxed tracking-wide;
+  }
+  
+  .terminal-text {
+    @apply font-mono text-sm tracking-wider;
+  }
+}
+
+/* Custom Scrollbar for the Brutalist Look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000; 
+}
+::-webkit-scrollbar-thumb {
+  background: #222; 
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8B0000; 
+}
