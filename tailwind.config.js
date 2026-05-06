@@ -7,15 +7,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        obsidian: '#0B0B0B',
-        crimson: '#8B0000',
-        bronze: '#CD7F32',
-        gold: '#D4AF37'
+        // v2.2 brand tokens (locked in The Agoge Method bundle v2.2)
+        ink:        '#0A0A0A',
+        paper:      '#F4EFE6',
+        gold:       '#C9A24A',
+        'gold-deep':'#8C6E25',
+        'gold-pale':'#E8D9A8',
+        ash:        '#6E6A60',
+        hairline:   '#C9C2B2',
+        emerald:    '#2EBE5C',
+        crimson:    '#A12C2C',
+        // legacy aliases (existing components still reference these)
+        obsidian:   '#0A0A0A',
+        bronze:     '#C9A24A',
       },
       fontFamily: {
-        serif: ['"Cinzel"', 'serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
-        sans: ['"Inter"', 'sans-serif'],
+        // v2.2 specifies DM Serif Display for headings; keep Cinzel as a fallback
+        // until the font swap is fully exercised.
+        serif: ['"DM Serif Display"', '"Cinzel"', 'serif'],
+        mono:  ['"JetBrains Mono"', 'monospace'],
+        sans:  ['"Inter"', 'sans-serif'],
       }
     },
   },

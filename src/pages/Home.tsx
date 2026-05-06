@@ -69,6 +69,185 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* 3. THE TWO PILLARS */}
+      <section className="py-24 px-6 border-t border-white/5">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="text-center mb-16"
+          >
+            <p className="text-crimson text-xs tracking-[0.4em] mb-4">DOCTRINE / STRUCTURE</p>
+            <h2 className="font-serif text-3xl md:text-5xl text-white mb-4">THE TWO PILLARS</h2>
+            <p className="text-bronze italic text-lg">The Pillars are two. The Doctrine is one.</p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-obsidian border border-white/10 p-8 md:p-10"
+            >
+              <div className="text-bronze text-[11px] tracking-[0.28em] mb-2">PILLAR I</div>
+              <h3 className="font-serif text-3xl text-white mb-2">LEONIDAN</h3>
+              <p className="font-serif italic text-bronze mb-4">Warrior-king formation.</p>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Operational hardship under fire. Throttle discipline when the situation refuses to slow down. The combat-frame of leadership. Patron: Leonidas I of Sparta.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-obsidian border border-white/10 p-8 md:p-10"
+            >
+              <div className="text-bronze text-[11px] tracking-[0.28em] mb-2">PILLAR II</div>
+              <h3 className="font-serif text-3xl text-white mb-2">GORGONIAN</h3>
+              <p className="font-serif italic text-bronze mb-4">Strategic sovereign formation.</p>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Pattern recognition before the pattern is visible. Civic indispensability. Voice as instrument of governance. Patron: Gorgo, Queen of Sparta.
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/pillars">
+              <span className="text-bronze text-sm tracking-[0.18em] uppercase cursor-pointer border-b border-bronze/40 hover:border-bronze pb-1 transition-colors">
+                Read the Two Pillars →
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. THE THREE ARCHETYPES */}
+      <section className="py-24 px-6 bg-black/40 border-t border-white/5">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="text-center mb-16"
+          >
+            <p className="text-crimson text-xs tracking-[0.4em] mb-4">DOCTRINE / TYPOLOGY</p>
+            <h2 className="font-serif text-3xl md:text-5xl text-white mb-4">THE THREE ARCHETYPES</h2>
+            <p className="text-bronze italic text-lg max-w-3xl mx-auto leading-relaxed">
+              They were always there. We are the ones who finally read the sources.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { id: "leonidas", name: "LEONIDAS", role: "The Warrior-King", note: "Founder under existential pressure." },
+              { id: "gorgo",    name: "GORGO",    role: "The Strategic Sovereign", note: "Judgment that resolves the room." },
+              { id: "cynisca",  name: "CYNISCA",  role: "The Breaker of Barriers", note: "Systems mastery, not protest." },
+            ].map((a, i) => (
+              <motion.div
+                key={a.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: i * 0.1 }}
+                className="bg-obsidian border border-white/10 p-8 text-center"
+              >
+                <h3 className="font-serif text-3xl text-white mb-2 tracking-wide">{a.name}</h3>
+                <p className="font-serif italic text-bronze mb-4">{a.role}</p>
+                <p className="text-white/65 text-sm">{a.note}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/archetypes">
+              <span className="text-bronze text-sm tracking-[0.18em] uppercase cursor-pointer border-b border-bronze/40 hover:border-bronze pb-1 transition-colors">
+                Read the Archetypes with Primary Sources →
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. THE TWO LIVING SYSTEMS */}
+      <section className="py-24 px-6 border-t border-white/5">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="text-center mb-16"
+          >
+            <p className="text-crimson text-xs tracking-[0.4em] mb-4">INFRASTRUCTURE / INSTITUTION-GRADE</p>
+            <h2 className="font-serif text-3xl md:text-5xl text-white mb-4">THE TWO LIVING SYSTEMS</h2>
+            <p className="text-bronze italic text-lg max-w-3xl mx-auto leading-relaxed">
+              The Doctrine speaks. It does not stutter.<br />
+              The certification is a pulse, not a stamp.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-obsidian border border-white/10 p-8 md:p-10"
+            >
+              <div className="text-bronze text-[11px] tracking-[0.28em] mb-2">LIVING SYSTEM I</div>
+              <h3 className="font-serif text-2xl md:text-3xl text-white mb-3">CALIBRATED VOICE COMPANION</h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Tri-provider TTS failover · zero-downtime VOX · calibrated authentic voice · bi-directional speech recognition. Executive interface that never stutters and always speaks with the calibrated authority required for the moment.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-obsidian border border-white/10 p-8 md:p-10"
+            >
+              <div className="text-bronze text-[11px] tracking-[0.28em] mb-2">LIVING SYSTEM II</div>
+              <h3 className="font-serif text-2xl md:text-3xl text-white mb-3">ACTIVE IAC</h3>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Continuous DETECTIO · CADENTIA at 8-hour heartbeat · self-healing DIRECTIO · live compliance recertification, input/output provenance. Self-healing governance infrastructure for autonomous AI at the enterprise level.
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="text-center mt-10">
+            <Link href="/living-systems">
+              <span className="text-bronze text-sm tracking-[0.18em] uppercase cursor-pointer border-b border-bronze/40 hover:border-bronze pb-1 transition-colors">
+                Read the Living Systems →
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. THE APEX */}
+      <section className="py-24 px-6 bg-black border-t border-white/5">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-crimson text-xs tracking-[0.4em] mb-6">THE APEX GATE</p>
+          <h2 className="font-serif text-4xl md:text-6xl text-white mb-6">
+            IMPERATOR · IMPERATRIX
+          </h2>
+          <p className="text-white/70 text-base md:text-lg leading-relaxed mb-12">
+            One gate. Two ceremonial registers. Same Founder. Same standard. The candidate who completes the Cursus stands before the Apex — and the Apex either confirms, or does not.
+          </p>
+          <Link href="/access">
+            <button className="btn-primary">Submit to the Gates</button>
+          </Link>
+        </div>
+      </section>
     </div>
   );
 }

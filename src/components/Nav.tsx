@@ -5,8 +5,10 @@ export default function Nav() {
 
   const links = [
     { href: "/doctrine", label: "THE DOCTRINE" },
+    { href: "/pillars", label: "PILLARS" },
+    { href: "/archetypes", label: "ARCHETYPES" },
+    { href: "/living-systems", label: "LIVING SYSTEMS" },
     { href: "/access", label: "FOUNDER PHASE" },
-    { href: "/dashboard", label: "INTERVENTION UI" },
   ];
 
   return (

@@ -2,6 +2,9 @@ import { Route, Switch } from "wouter";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Doctrine from "./pages/Doctrine";
+import Pillars from "./pages/Pillars";
+import Archetypes from "./pages/Archetypes";
+import LivingSystems from "./pages/LivingSystems";
 import Access from "./pages/Access";
 import Dashboard from "./pages/Dashboard";
 
@@ -13,6 +16,9 @@ function App() {
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/doctrine" component={Doctrine} />
+          <Route path="/pillars" component={Pillars} />
+          <Route path="/archetypes" component={Archetypes} />
+          <Route path="/living-systems" component={LivingSystems} />
           <Route path="/access" component={Access} />
           <Route path="/dashboard" component={Dashboard} />
         </Switch>
