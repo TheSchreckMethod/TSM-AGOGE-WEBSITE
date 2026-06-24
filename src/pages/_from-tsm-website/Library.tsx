@@ -89,7 +89,7 @@ export default function Library() {
             {loading ? "" : `${series.length - 1} Series. One Framework.`}
           </h2>
           <p className="text-base max-w-xl" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'DM Sans, sans-serif', lineHeight: 1.7 }}>
-            The complete intelligence library of The Schreck Method. Every volume governed by the ICA framework. Click any cover to download.
+            The complete intelligence library of ALEETH. Every volume governed by the ICA framework. Click any cover to download.
           </p>
         </div>
       </section>
